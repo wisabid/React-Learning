@@ -26,3 +26,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.crl {
+  border-radius:50px;
+  background:grey;
+  margin:25px;
+  width:100px;
+  height: 100px;
+  float: left;
+  position: relative;
+  color: #fff;
+  padding:20px;
+  }

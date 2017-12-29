@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Users from './users/Users';
+import Profiles from './profiles/Profiles';
 
 // function actAsComponent() {
 //   return <p>Love you to the moon and back <p>;
@@ -26,6 +27,7 @@ class App extends Component {
         </div>
         <hr />
         <Users/>
+        <Profiles title="I'm a Profile Class Component"/>
       </div>
 
     );
