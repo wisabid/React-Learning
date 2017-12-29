@@ -1,0 +1,3 @@
+React JS
+
+ - virtual DOM. react only interacts with it. No direct reading or manipulation from/to DOM.
