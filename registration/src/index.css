@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f0f4f5;
+}
+.App-intro {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.regform .formContainer {
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px;
+}
+fieldset {
+	text-align: left;
+	font-size: 15px;
+}
+input, select {
+	margin-bottom: 10px;
+	 width: 100%;
+}
+ul {
+	list-style: none;
+	height: 200px;
+	padding: 10px;
+	overflow: auto;
+	border:1px solid #ddd;
+	margin-left: 200px;
+	text-align: left;
+}
+ul li {
+	font-size: 13px;
+}
+.users {}
