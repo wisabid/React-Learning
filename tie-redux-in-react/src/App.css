@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+  font-family: "Verdana";
+  background: #ccc
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 80px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.wrapper {
+  display:grid;
+  grid-template-columns : repeat(auto-fit, minmax(670px, 1fr));
+  /*grid-template-rows : repeat(2, 200px)*/
+  grid-template-rows : 400px 300px;
+}
+.wrapper .blog-list {
+  background: #29B6F6;
+  color:#fff;
+  border-radius: 30px;
+  /*grid-column : 1/2;
+  grid-row : 1/2;*/
+}
+.wrapper .add-blog {
+  background: #AED581;
+  color:#fff;
+  border-radius: 30px;
+  /*grid-column : 2/3;
+  grid-row : 1/2;*/
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer1 {
+  background: #000;
+  color:#fff;
+  padding: 10px 0;
+}
+.footer2 {
+  background: #607D8B;
+  color:#fff;
+  padding: 10px 0;
+}
+ul {
+      list-style: none;
+    text-align: left;
+    font-style: italic;
+}
+button {
+      width: 200px;
+    height: 200px;
+    background: #AFB42B
+}
+
