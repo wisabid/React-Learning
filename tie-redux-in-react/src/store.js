@@ -5,6 +5,9 @@ import promise from 'redux-promise-middleware'
 
 import reducer from './reducers'
 
+const customLogger = (store) => (next) => (action) => {
+	
+}
 const middleware = applyMiddleware(promise(), thunk, logger);
 const store = createStore(reducer, middleware);
 

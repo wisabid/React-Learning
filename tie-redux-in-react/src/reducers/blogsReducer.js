@@ -1,7 +1,13 @@
 export default function reducer(state = [], action) {
 	switch(action.type) {
 		case 'ADD_BLOG' : {
-			state = [ ...state, {title : action.payload[0].title, desc : action.payload[0].desc, cat : action.payload[0].cat, date : action.payload[0].date}]
+			let blogs = [];
+			action.payload.map((item) => {
+				blogs.push({about : item.about, email : item.email})
+				return item;
+			})
+			state = [ ...state];
+			state = blogs;
 			break;
 		}
 	}

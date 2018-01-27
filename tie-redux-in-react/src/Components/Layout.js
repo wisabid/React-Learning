@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'; //connect portion of react redux
 
 import {fetchUser, changeAge} from '../actions/userActions'
+import {fetchAllBlogs} from '../actions/blogsAction'
 
 //decorator to create wrapper for this component for injecting props from store
 /*@connect((store) => {
@@ -18,6 +19,9 @@ class Layout extends Component {
 		//this.props.action.dispatch(fetchUser);
 	}
 	render() {
+		const blogsli = this.props.blogs.map((item) => {
+			return <li key={item.email}>{item.email} : {item.about}</li>
+		})
 		return (
 				<Fragment>
 					<div className="blog-list">
@@ -31,6 +35,12 @@ class Layout extends Component {
 								this.props.user.email != null?" & You are reachable at "+this.props.user.email:''
 							}
 							</i></strong>
+							<div style={{borderRadius : '20px', padding: '10px', height: '200px', overflow: 'auto', background : '#fff', color : '#000', margin: '5px'}}>
+								<h4>Blogs List</h4>
+								<ol>
+									{blogsli}
+								</ol>
+							</div>
 
 
 								
@@ -38,7 +48,8 @@ class Layout extends Component {
 					</div>
 					<div className="add-blog">
 							<button onClick={this.props.action.fetchUser}>Login</button> <br />
-							<button onClick={() => this.props.action.changeAge(2)}>Change Age</button>
+							<button onClick={() => this.props.action.changeAge(2)}>Change Age</button><br/>
+							<button onClick={this.props.action.fetchAllBlogs}>Load Blogs</button>
 					</div>
 				</Fragment>
 		)
@@ -48,13 +59,14 @@ class Layout extends Component {
 function mapStateToProps(state, prop) {
 	console.table(state);
 	return {
-		user : state.user
+		user : state.user,
+		blogs : state.blogs
 	};
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
-		action : bindActionCreators({fetchUser, changeAge}, dispatch)
+		action : bindActionCreators({fetchUser, changeAge, fetchAllBlogs}, dispatch)
 	}
 }
 
