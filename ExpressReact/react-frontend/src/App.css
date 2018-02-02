@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+}
+@keyframes appearonebyeone {
+  0% {
+    /*transform: scale(3);*/
+    color:orange;
+  }
+  100% {
+    /*transform: scale(1);*/
+    color:#fff;
+  }
+}
+ul li {
+  
+}
+ul li.animit {
+  /*transition: all 1s appearonebyeone 0s;*/
+  animation : 2s ease-in-out 0s 3 appearonebyeone;
+  color: #fff;
+}
+
+
+.wrapper {  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper div {
+  background: orange;
+  border-radius: 5px;
+  width :300px;
+}

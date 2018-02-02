@@ -32,7 +32,7 @@ class Child extends Component{
 	}
 
 	componentDidUpdate() {
-    	console.log('%c >> Im Child componentDidUpdate !', 'color:orange;font-weight:bold;');
+    	console.log('%c >> Im Child componentDidUpdate ! Call some 3rd part UI element/library here', 'color:orange;font-weight:bold;');
 	}
 
 	componentWillUnmount() {
@@ -52,6 +52,7 @@ class Child extends Component{
 			return (
 				<Fragment>
 					<h1>Hi Alfie! Im just another component! Please see console! {this.props.name}</h1>
+					<p>componentWillReceiveProps is invoked before a mounted component receives new props, this means React doesn’t call componentWillReceiveProps with initial props during mounting.</p>
 				</Fragment>
 			)
 		}

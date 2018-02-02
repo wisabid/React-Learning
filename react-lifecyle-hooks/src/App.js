@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log('%cIm componentDidMount !', 'color:indigo;font-weight:bold;')
+    console.log('%cIm componentDidMount ! USe this method for calling ajax and subscribe for some events', 'color:indigo;font-weight:bold;')
   }
 
   componentWillUnmount() {
